@@ -13,7 +13,7 @@ import androidx.navigation.Navigation
 import com.troid.youtube.R
 import com.troid.youtube.adapter.VideosAdapter
 import com.troid.youtube.pojo.response.ItemsItem
-import kotlinx.android.synthetic.main.videos_list_fragment.*
+import kotlinx.android.synthetic.main.list_item.*
 
 class VideosListFragment : Fragment() {
 
@@ -30,7 +30,7 @@ class VideosListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        return inflater.inflate(R.layout.videos_list_fragment, container, false)
+        return inflater.inflate(R.layout.list_item, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

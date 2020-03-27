@@ -25,7 +25,7 @@
         android:id="@+id/videosListFragment"
         android:name="com.troid.youtube.ui.videos.VideosListFragment"
         android:label="videos_list_fragment"
-        tools:layout="@layout/videos_list_fragment" >
+        tools:layout="@layout/list_item" >
         <action
             android:id="@+id/action_videosListFragment_to_playVideoFragment"
             app:destination="@id/playVideoFragment" />

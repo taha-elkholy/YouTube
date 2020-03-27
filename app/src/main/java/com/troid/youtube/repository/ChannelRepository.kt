@@ -1,15 +1,9 @@
 package com.troid.youtube.repository
 
-import android.content.res.Resources
-import android.provider.Settings.Secure.getString
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.troid.youtube.*
-import com.troid.youtube.data.remot.ApiManager
 import com.troid.youtube.pojo.Channel
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class ChannelRepository {
 
@@ -27,20 +21,4 @@ class ChannelRepository {
         return channelsLiveData
 
     }
-//    fun getChannels(): LiveData<List<Channel>> {
-//        val channelsLiveData = MutableLiveData<List<Channel>>()
-//        ApiManager.apiService.getChannels(API_KEY)
-//            .enqueue(object : Callback<Channel>{
-//                override fun onFailure(call: Call<Channel>, t: Throwable) {
-//                    t.printStackTrace()
-//                }
-//
-//                override fun onResponse(call: Call<Channel>, response: Response<Channel>) {
-//                    response.body()?.let {
-//                        channelsLiveData.postValue(listOf(it))
-//                    }
-//                }
-//            })
-//        return channelsLiveData
-//    }
 }

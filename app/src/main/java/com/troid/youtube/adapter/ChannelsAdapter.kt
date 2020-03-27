@@ -46,7 +46,7 @@ class ChannelsAdapter : RecyclerView.Adapter<ChannelsAdapter.ChannelsViewHolder>
 //                .into(ChannelImageView)
             setOnClickListener {
                 if (onItemClickListener != null) {
-                    onItemClickListener!!.onItemClick(adapterPosition,item)
+                    onItemClickListener!!.onItemClick(adapterPosition, item)
                 }
             }
         }
@@ -60,6 +60,6 @@ class ChannelsAdapter : RecyclerView.Adapter<ChannelsAdapter.ChannelsViewHolder>
     /* Interface to listen for Clicks */
     interface OnItemClickListener {
         // what you need for return from the item
-        fun onItemClick(position: Int, item:Channel)
+        fun onItemClick(position: Int, item: Channel)
     }
 }

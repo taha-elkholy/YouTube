@@ -12,9 +12,4 @@ class VideosListViewModel : ViewModel() {
         return videoListRepository.getVideos(channelId)
     }
 
-    fun getLink(channelId: String,position:Int): LiveData<String>? {
-        val videoId = videoListRepository.getVideos(channelId).value?.get(position)
-            ?.id?.videoId as LiveData<String>?
-        return videoId
-    }
 }

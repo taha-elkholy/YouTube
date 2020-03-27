@@ -38,6 +38,7 @@ class VideosAdapter : RecyclerView.Adapter<VideosAdapter.VideoViewHolder>() {
         fun bind(item: ItemsItem) = with(itemView) {
 
             channelNameTextView.text = item.snippet?.title
+            ChannelImageView.setImageResource(R.drawable.play_video)
             setOnClickListener {
                 if (onItemClickListener != null) {
                     onItemClickListener!!.onItemClick(item, adapterPosition)

@@ -10,5 +10,5 @@ interface ApiService {
     @GET("search") // endpoint
     fun getVideos(@Query("part") part: String, // snippet
                     @Query("channelId") channelId: String,  //UCsJRPfHLASyko7TKI2NXeCA
-                    @Query("apiKey") apiKey:String) : Call<VideoResponse>
+                    @Query("key") apiKey:String) : Call<VideoResponse>
 }

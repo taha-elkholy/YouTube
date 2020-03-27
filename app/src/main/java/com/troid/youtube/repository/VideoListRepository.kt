@@ -19,21 +19,23 @@ class VideoListRepository {
             .enqueue(object : Callback<VideoResponse>{
                 override fun onFailure(call: Call<VideoResponse>, t: Throwable) {
                     t.printStackTrace()
+                    Log.v("taha", "error in call") // it null
+
                 }
 
                 override fun onResponse(
                     call: Call<VideoResponse>,
                     response: Response<VideoResponse>
                 ) {
-                    response.body()?.items.let {
-                        Log.v("do", "done ${it?.size}") // it null
 
-                        videosLiveData.postValue(it as? List<ItemsItem>)
+                    response.body()?.items.let {
+                        Log.v("taha", "done ${it?.size}") // it null???
+
+                        videosLiveData.postValue(it as List<ItemsItem>)
                     }
                 }
             })
 
         return videosLiveData
     }
-
 }
